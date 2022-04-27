@@ -49,7 +49,7 @@ const updateType = (request, response) => {
     var responseReturn = new ResponseClass();
     try {
         const { project_name } = request.body;
-        pool.query('UPDATE type SET project_name = $1', [project_name], (error, results) => {
+        pool.query('UPDATE type SET project_name = $1 WHERE id_type = $2', [project_name, id_type], (error, results) => {
             if (error) {
                 throw error
             }
