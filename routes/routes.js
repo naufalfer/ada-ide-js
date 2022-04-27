@@ -3,6 +3,7 @@ const router = express.Router();
 const type = require('../controller/type');
 const transfermethod = require('../controller/transfermethod');
 const project = require('../controller/project');
+const news = require('../controller/news');
 
 //Type routes
 router.get("/type", type.getType);
@@ -24,5 +25,12 @@ router.get("/project/:id_project", project.getProjectById);
 router.put("/project/:id_project", project.updateProject);
 router.post("/project", project.createProject);
 router.delete("/project/:id_project", project.deleteProject);
+
+//News routes
+router.get("/news", news.getNews);
+router.get("/news/:id_news", news.getNewsById);
+router.put("/news/:id_news", news.updateNews);
+router.post("/news", news.createNews);
+router.delete("/news/:id_news", news.deleteNews);
 
 module.exports = router;
