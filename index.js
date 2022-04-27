@@ -5,6 +5,8 @@ const routes = require("./routes/routes")
 
 const app = express();
 
+global.__basedir = __dirname;
+
 app.use(bodyParser.json());
 app.use(cors());
 app.use(routes);
