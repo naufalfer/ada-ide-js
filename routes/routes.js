@@ -4,6 +4,7 @@ const type = require('../controller/type');
 const transfermethod = require('../controller/transfermethod');
 const project = require('../controller/project');
 const news = require('../controller/news');
+const donation = require('../controller/donation');
 
 //Type routes
 router.get("/type", type.getType);
@@ -32,5 +33,11 @@ router.get("/news/:id_news", news.getNewsById);
 router.put("/news/:id_news", news.updateNews);
 router.post("/news", news.createNews);
 router.delete("/news/:id_news", news.deleteNews);
+
+//Donation routes
+router.get("/donation", donation.getDonation);
+router.get("/donation/:id_donation", donation.getDonationById);
+router.post("/donation", donation.createDonation);
+router.delete("/donation/:id_donation", donation.deleteDonation);
 
 module.exports = router;

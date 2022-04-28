@@ -1,9 +1,3 @@
-// import { fileURLToPath } from 'url';
-// import { dirname } from 'path';
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __basedir = dirname(__filename);
-
 const pool = require("../config/db");
 const ResponseClass = require("../model/response")
 const uploadFile = require("../middleware/upload");
